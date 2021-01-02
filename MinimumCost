@@ -1,0 +1,27 @@
+import java.util.*;
+import java.io.*;
+import java.lang.*;
+public class Solution {
+	public static void main (String[] args) {
+		Scanner sc=new Scanner(System.in);	
+		int cost=0;
+	int test=sc.nextInt();
+	for(int i=0;i<=test-1;i++){
+	    Vector v =new Vector();
+	    int len=sc.nextInt();
+	    for(int j=0;j<=len-1;j++){
+	    int data=sc.nextInt();
+	    v.add(data);
+	}
+    while(v.size()>=2) {
+		Collections.sort(v);
+		int res=(int)v.get(0)+(int)v.get(1);
+		cost+=res;
+		v.remove(0);
+		v.remove(0);
+        v.add(res);
+	}
+	System.out.println(cost);
+	  }
+	}
+}
